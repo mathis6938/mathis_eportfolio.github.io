@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathis Nancey | ePortfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
         :root {
-            --primary: #2563EB; /* Bleu moderne */
-            --secondary: #1E293B; /* Gris foncé */
-            --accent: #10B981; /* Vert subtil */
+            --primary: #2563EB;
+            /* Bleu moderne */
+            --secondary: #1E293B;
+            /* Gris foncé */
+            --accent: #10B981;
+            /* Vert subtil */
             --bg-light: #F3F4F6;
             --white: #ffffff;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--secondary); line-height: 1.6; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
 
         /* --- HEADER & NAV --- */
         header {
@@ -39,9 +53,19 @@
             padding: 1rem 2rem;
         }
 
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
-        
-        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
         .nav-links li a {
             text-decoration: none;
             color: var(--secondary);
@@ -49,63 +73,175 @@
             transition: color 0.3s;
             cursor: pointer;
         }
-        .nav-links li a:hover, .nav-links li a.active { color: var(--primary); }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--primary);
+        }
 
         /* --- MAIN CONTAINER --- */
-        main { margin-top: 80px; padding: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        main {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* --- SECTIONS (TAB SYSTEM) --- */
-        .tab-content { display: none; animation: fadeIn 0.5s ease; }
-        .tab-content.active { display: block; }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* --- HERO SECTION --- */
-        .hero { text-align: center; padding: 4rem 1rem; background: var(--white); border-radius: 1rem; margin-bottom: 2rem; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--secondary); }
-        .hero p { font-size: 1.1rem; color: #64748B; max-width: 600px; margin: 0 auto 2rem; }
-        .btn {
-            background: var(--primary); color: white; padding: 0.8rem 1.5rem;
-            border-radius: 0.5rem; text-decoration: none; font-weight: 600;
-            transition: background 0.3s; display: inline-block;
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: var(--white);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
         }
-        .btn:hover { background: #1d4ed8; }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #64748B;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
 
         /* --- CARDS GRID --- */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        
-        .card {
-            background: var(--white); padding: 2rem; border-radius: 1rem;
-            box-shadow: var(--shadow); transition: transform 0.3s; border-left: 4px solid var(--primary);
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-bottom: 0.5rem; color: var(--secondary); }
-        .card .icon { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; }
-        
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-left: 4px solid var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
         /* --- TIMELINE (CAREER) --- */
         .timeline-item {
-            background: var(--white); padding: 1.5rem; margin-bottom: 1rem;
-            border-radius: 0.5rem; border-left: 4px solid var(--accent);
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--accent);
             box-shadow: var(--shadow);
         }
-        .date { font-size: 0.9rem; color: #64748B; font-weight: 600; margin-bottom: 0.5rem; display: block; }
+
+        .date {
+            font-size: 0.9rem;
+            color: #64748B;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
 
         /* --- MOBILITY SPECIFIC --- */
-        .flag-icon { margin-right: 0.5rem; }
+        .flag-icon {
+            margin-right: 0.5rem;
+        }
 
         /* --- FOOTER --- */
-        footer { text-align: center; padding: 2rem; color: #64748B; margin-top: 4rem; border-top: 1px solid #e2e8f0; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748B;
+            margin-top: 4rem;
+            border-top: 1px solid #e2e8f0;
+        }
 
         /* Mobile Menu */
-        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
-        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 70px; left: 0; background: white; padding: 1rem; box-shadow: var(--shadow); }
-            .nav-links.active { display: flex; }
-            .menu-toggle { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -127,12 +263,13 @@
         <section id="home" class="tab-content active">
             <div class="hero">
                 <h1>Computer Science Student</h1>
-                <p>Student at <strong>ENSEEIHT</strong> (HPC Big Data). Passionate about Data Science, AI Security, and Software Engineering.</p>
+                <p>Student at <strong>ENSEEIHT</strong> (HPC Big Data). Passionate about Data Science, AI Security, and
+                    Software Engineering.</p>
                 <div style="margin-top: 20px;">
                     <a href="CV.pdf" class="btn" download><i class="fas fa-download"></i> Download CV</a>
                 </div>
             </div>
-            
+
             <h2 style="margin-bottom: 1rem;">Core Skills</h2>
             <div class="grid">
                 <div class="card">
@@ -156,7 +293,7 @@
         <section id="engineering" class="tab-content">
             <h1>Engineering Course</h1>
             <p>Projects and academic achievements at ENSEEIHT.</p>
-            
+
             <div class="grid">
                 <div class="card">
                     <i class="fas fa-network-wired icon"></i>
@@ -164,9 +301,23 @@
                     <p>Designed a routing algorithm in C for network simulation, optimizing pathfinding efficiency.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-project-diagram icon"></i>
-                    <h3>MLP Neural Network</h3>
-                    <p>Implemented a Multi-Layer Perceptron from scratch in Python with Adam optimizer and L2 regularization.</p>
+                    <i class="fas fa-chart-line icon"></i>
+                    <h3>Recherche Opérationnelle</h3>
+                    <p>Projet d'optimisation et de recherche opérationnelle (modélisation de problèmes complexes).</p>
+                    <div style="margin-top: 15px;">
+                        <a href="TDTPRO_2025_2026.pdf" class="btn" download
+                            style="font-size: 0.9rem; padding: 0.5rem 1rem;"><i class="fas fa-file-pdf"></i> Rapport</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-calculator icon"></i>
+                    <h3>Optimisation Numérique</h3>
+                    <p>Projet avancé sur les méthodes d'optimisation numérique et leurs applications.</p>
+                    <div style="margin-top: 15px;">
+                        <a href="doc-projet.pdf" class="btn" download
+                            style="font-size: 0.9rem; padding: 0.5rem 1rem;"><i class="fas fa-file-pdf"></i>
+                            Documentation</a>
+                    </div>
                 </div>
                 <div class="card">
                     <i class="fas fa-trophy icon" style="color: gold;"></i>
@@ -183,46 +334,44 @@
 
         <section id="mobility" class="tab-content">
             <h1>International Mobility</h1>
-            <p>My goal is to develop international experience through exchange programs and discover new innovation ecosystems.</p>
+            <p>My goal is to develop international experience through exchange programs and discover new innovation
+                ecosystems.</p>
 
-            <div class="grid">
-                <div class="card" style="border-left-color: #EF4444;">
-                    <h3><i class="fas fa-flag-usa flag-icon"></i> England / USA</h3>
-                    <p>Targeting English-speaking countries for advanced Data Science and Software Engineering opportunities.</p>
-                </div>
-                <div class="card" style="border-left-color: #F59E0B;">
-                    <h3><i class="fas fa-globe-asia flag-icon"></i> Asia</h3>
-                    <p>To discover a new professional culture and thriving technological hubs.</p>
-                </div>
-                <div class="card" style="border-left-color: #10B981;">
-                    <h3><i class="fas fa-leaf flag-icon"></i> Cambodia</h3>
-                    <p><strong>Preferred Destination.</strong> Unlike traditional destinations, I want to immerse myself in Cambodia to build resilience and discover the Khmer culture while adapting to a rapidly developing digital environment.</p>
-                </div>
-            </div>
+            <h3>Preferred Destinations</h3>
+            <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>Universitetet i Stavanger (Norvege)</strong></li>
+                <li style="margin-bottom: 0.5rem;"><strong>Norges Teknisk-Naturvitenskapelige Universitet
+                        (Norvege)</strong></li>
+                <li style="margin-bottom: 0.5rem;"><strong>UiT Norges arktiske universitet (Norvege)</strong></li>
+                <li><strong>Institut de Technologie du Cambodge (Cambodge)</strong></li>
+            </ol>
         </section>
 
         <section id="career" class="tab-content">
             <h1>Career Development</h1>
             <p>My goal is to become a Data Scientist or Software Engineer.</p>
-            
+
             <h2 style="margin-top: 2rem; margin-bottom: 1rem;">Experience</h2>
-            
+
             <div class="timeline-item">
                 <span class="date">June - August 2025 & July 2024</span>
                 <h3>Production Line Operator</h3>
-                <p><strong>TECUMSEH</strong> - Worked on production lines, developing rigor and teamwork in an industrial setting.</p>
+                <p><strong>TECUMSEH</strong> - Worked on production lines, developing rigor and teamwork in an
+                    industrial setting.</p>
             </div>
 
             <div class="timeline-item">
                 <span class="date">August 2023</span>
                 <h3>Waste Management Operator</h3>
-                <p><strong>Guyonet</strong> - Waste sorting and cardboard compacting. Financed my studies through student jobs.</p>
+                <p><strong>Guyonet</strong> - Waste sorting and cardboard compacting. Financed my studies through
+                    student jobs.</p>
             </div>
 
             <h2 style="margin-top: 2rem; margin-bottom: 1rem;">Objectives</h2>
             <div class="card">
                 <h3>Internship Search (June - Aug 2026)</h3>
-                <p>Looking for an engineering internship in <strong>Data Science</strong> or <strong>Numerical Optimization</strong>.</p>
+                <p>Looking for an engineering internship in <strong>Data Science</strong> or <strong>Numerical
+                        Optimization</strong>.</p>
             </div>
         </section>
 
@@ -232,13 +381,16 @@
                 <div class="card">
                     <i class="fas fa-plane icon"></i>
                     <h3>Aviation</h3>
-                    <p><strong>Pilot's License (2022)</strong>. Certified since 2020. Volunteer at Aéroclub de Morestel.</p>
+                    <p><strong>Pilot's License (2022)</strong>. Certified since 2020. Volunteer at Aéroclub de Morestel.
+                    </p>
                 </div>
                 <div class="card">
                     <i class="fas fa-mountain icon"></i>
                     <h3>Sports</h3>
-                    <p><strong>Trail Running & Skiing</strong> - Developing endurance and mental strength.</p>
-                    <p><strong>Judo</strong> - Learned discipline and respect.</p>
+                    <p><strong>Judo</strong> - Pratique en compétition nécessitant analyse tactique rapide et gestion du
+                        stress.</p>
+                    <p><strong>Trail Running & Skiing</strong> - Sports d'endurance en montagne, renforçant la
+                        persévérance et la gestion de l'effort sur la durée.</p>
                 </div>
             </div>
         </section>
@@ -247,15 +399,16 @@
             <div class="hero">
                 <h1>Get in Touch</h1>
                 <p>Open to collaborations and internship opportunities.</p>
-                
+
                 <div style="margin-top: 2rem;">
                     <p><i class="fas fa-envelope"></i> mathis.nancey@etu.toulouse-inp.fr</p>
                     <p><i class="fas fa-phone"></i> 07 68 76 65 99</p>
                     <p><i class="fas fa-map-marker-alt"></i> Toulouse, France</p>
                 </div>
-                
+
                 <div style="margin-top: 2rem;">
-                    <a href="https://github.com/mathis6938" target="_blank" class="btn" style="background: #333;"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://github.com/mathis6938" target="_blank" class="btn" style="background: #333;"><i
+                            class="fab fa-github"></i> GitHub</a>
                     <a href="CV.pdf" class="btn" download><i class="fas fa-file-pdf"></i> Download CV</a>
                 </div>
             </div>
@@ -273,17 +426,17 @@
             // Hide all contents
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
-            
+
             // Show selected content
             document.getElementById(tabId).classList.add('active');
-            
+
             // Update Navigation Active State
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => link.classList.remove('active'));
-            
+
             // Find the link that calls this function and add active class (simple match)
             const activeLink = Array.from(navLinks).find(link => link.getAttribute('onclick').includes(tabId));
-            if(activeLink) activeLink.classList.add('active');
+            if (activeLink) activeLink.classList.add('active');
 
             // Close mobile menu if open
             document.querySelector('.nav-links').classList.remove('active');
@@ -295,4 +448,5 @@
         });
     </script>
 </body>
+
 </html>
